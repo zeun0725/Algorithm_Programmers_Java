@@ -1,4 +1,4 @@
-package com.company.hash;
+package com.programmers.hash;
 import java.util.*;
 
 public class Hash1 {
