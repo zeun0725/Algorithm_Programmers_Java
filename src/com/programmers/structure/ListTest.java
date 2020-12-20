@@ -28,6 +28,29 @@ public class ListTest {
         System.out.println(llist);
         //[one, three, four, two, five]
 
+        System.out.println("first element: " + l1.get(0));
+        System.out.println("last index of three: " + l1.lastIndexOf("three"));
+
+        l1.set(0, "zero"); //0번째 인덱스 값 바꿈
+        System.out.println("after set():element in linkedlist");
+        System.out.println(l1);
+        //[zero, three, four, two, five]
+
+        Collections.sort(l1); //내림차순 정렬
+        System.out.println(l1);
+        //[five, four, three, two, zero]
+
+        //오름차순 정렬
+        l1.sort((Comparator<Object>) (o1, o2) -> o2.toString().compareTo(o1.toString()));
+        System.out.println(l1);
+        //[zero, two, three, four, five]
+
+        System.out.println("오름차순 sort with stream api");
+        l1.stream().sorted(Comparator.reverseOrder()).forEach(System.out::println);
+
+
+
+
 
     }
 
