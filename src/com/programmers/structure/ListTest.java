@@ -36,11 +36,11 @@ public class ListTest {
         System.out.println(l1);
         //[zero, three, four, two, five]
 
-        Collections.sort(l1); //내림차순 정렬
+        Collections.sort(l1); //오름차순 정렬
         System.out.println(l1);
         //[five, four, three, two, zero]
 
-        //오름차순 정렬
+        //내림차순 정렬
         l1.sort((Comparator<Object>) (o1, o2) -> o2.toString().compareTo(o1.toString()));
         System.out.println(l1);
         //[zero, two, three, four, five]
