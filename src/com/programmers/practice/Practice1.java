@@ -1,3 +1,5 @@
+package com.programmers.practice;
+
 import java.util.*;
 
 package com.programmers.practice;
