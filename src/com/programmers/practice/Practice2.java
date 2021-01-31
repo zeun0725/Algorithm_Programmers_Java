@@ -1,16 +1,13 @@
 package com.programmers.practice;
-
 import java.util.*;
-
-public class Practice1 {
+public class Practice2 {
     public int[] solution(int []arr) {
         List<Integer> ans = new ArrayList<>();
         ans.add(arr[0]);
-        int preNum = arr[0];
-        for(int a:arr){
-            if(preNum != a){
-                ans.add(a);
-                preNum = a;
+        int ans_idx = 0;
+        for(int  idx=1;  idx<arr.length; idx++){
+            if(ans.get(ans.size()-1) != arr[idx]){
+                ans.add(arr[idx]);
             }
         }
         int[] answer = new int[ans.size()];
