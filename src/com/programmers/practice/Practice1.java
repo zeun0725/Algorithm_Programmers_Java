@@ -2,8 +2,6 @@ package com.programmers.practice;
 
 import java.util.*;
 
-package com.programmers.practice;
-
 public class Practice1 {
     public int[] solution(int []arr) {
         List<Integer> ans = new ArrayList<>();
