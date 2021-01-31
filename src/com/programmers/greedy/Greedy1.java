@@ -10,21 +10,22 @@ public class Greedy1 {
         List<Integer> lost_list = new ArrayList<>();
         List<Integer> reserve_list = Arrays.stream(reserve).boxed().collect(Collectors.toList());
 
-        for(int idx=0; idx<lost.length; idx++){
-            if(reserve_list.contains(lost[idx])){
-                reserve_list.remove(new Integer(lost[idx]));
+        for(int i: lost){
+            if(reserve_list.contains(i)){
+                reserve_list.remove(Integer.valueOf(i));
                 continue;
             }
-            lost_list.add(lost[idx]);
+            lost_list.add(i);
         }
+
         for(int l:lost_list){
             if(reserve_list.contains(l-1)){
 
-                reserve_list.remove(new Integer(l-1));
+                reserve_list.remove(Integer.valueOf(l - 1));
                 continue;
             }
             if(reserve_list.contains(l+1)){
-                reserve_list.remove(new Integer(l+1));
+                reserve_list.remove(Integer.valueOf(l + 1));
                 continue;
             }
             n--;
