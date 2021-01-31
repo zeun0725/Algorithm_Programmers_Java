@@ -1,4 +1,7 @@
+//모의고사
 package com.programmers.brute_force;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class BruteForce1 {
     public int[] solution(int[] answers) {
@@ -31,4 +34,5 @@ public class BruteForce1 {
         return new int[]{3};
 
     }
+
 }

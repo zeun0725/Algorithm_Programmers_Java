@@ -1,6 +1,6 @@
 package com.programmers.hash;
 import java.util.*;
-
+//완주하지 못한 선수
 public class Hash1 {
     public String solution(String[] participant, String[] completion) {
         String answer = "";
