@@ -1,12 +1,12 @@
 package com.programmers.greedy;
 
-public class Greedy2 {
+class Greedy2 {
     public int changeStrCount(String name, int answer) {
         for(int idx = 0; idx < name.length(); idx++) {
-            if((byte)name.charAt(idx) - 65 < 90 - (byte)name.charAt(idx))
+            if((byte)name.charAt(idx) - 65 < 91 - (byte)name.charAt(idx))
                 answer += (byte)name.charAt(idx) - 65;
             else
-                answer += 90 - (byte)name.charAt(idx);
+                answer += 91 - (byte)name.charAt(idx);
         }
         return answer;
     }
@@ -17,16 +17,14 @@ public class Greedy2 {
         while(!stand.equals(name.toString())){
             idx += direct;
             answer += Math.abs(direct);
-            if (direct==-1 && idx<0)
+            if ( idx<0)
                 idx = name.length()-1;
-            if (direct==1 && idx >= name.length())
+            if (idx >= name.length())
                 idx = 0;
             if(name.charAt(idx)!='A')
-                name.setCharAt(idx, 'A');
                 break;
 
         }
-
         return answer;
     }
     public int getMinDirection(String name) {
@@ -36,13 +34,27 @@ public class Greedy2 {
 
         StringBuilder builder = new StringBuilder(name);
         while(!stand.equals(builder.toString())) {
-            System.out.println(stand+builder.toString());
+            builder.setCharAt(idx,'A');
             int left = getDirectionCount(stand,builder, -1, idx);
             int right = getDirectionCount(stand,builder, 1, idx);
-            if (left > right)
+            if (left >= right) {
                 answer += right;
-            else
+                if(idx+right >= name.length()){
+                    right = (idx+right)-name.length();
+                    idx = right;
+                }
+                else
+                    idx += right;
+            }
+            else {
                 answer += left;
+                if(idx-left<0) {
+                    left = name.length() + (idx - left);
+                    idx = left;
+                }
+                else
+                    idx-=left;
+            }
         }
 
         return answer;
@@ -50,15 +62,9 @@ public class Greedy2 {
     public int solution(String name) {
         int answer = 0;
         answer = changeStrCount(name, answer);
+        System.out.println(answer);
         answer += getMinDirection(name);
 
-
         return answer;
-    }
-
-    public static void main(String[] args) {
-        Greedy2 g = new Greedy2();
-        int test = g.solution("JEROEN");
-        System.out.println(test);
     }
 }
