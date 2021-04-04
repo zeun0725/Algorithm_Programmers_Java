@@ -16,7 +16,6 @@ public class Kakao2 {
             }
             else
                 return false;
-
         }
         return true;
     }
@@ -38,12 +37,10 @@ public class Kakao2 {
                 break;
             }
         }
-
         return uvList;
     }
 
     public String setRightU(String u) {
-
         String newU = "";
         for(int idx=1; idx < u.length() -1; idx++) {
             if (u.charAt(idx) == '(')
@@ -52,7 +49,6 @@ public class Kakao2 {
                 newU += '(';
         }
         return newU;
-
     }
     public String solution(String p) {
         if (p.equals(""))
