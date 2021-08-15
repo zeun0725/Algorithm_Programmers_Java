@@ -7,5 +7,6 @@ public class StudentTest {
         studentLee.address = "seoul";
 
         studentLee.showStudentInfo();
+
     }
 }
