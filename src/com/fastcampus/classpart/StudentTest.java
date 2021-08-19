@@ -8,5 +8,11 @@ public class StudentTest {
 
         studentLee.showStudentInfo();
 
+        Student studentKim = new Student();
+        studentKim.studentName = "테스트2";
+        studentKim.address = "seoul";
+
+        studentKim.showStudentInfo();
+
     }
 }
