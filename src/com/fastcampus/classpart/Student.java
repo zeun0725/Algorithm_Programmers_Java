@@ -5,6 +5,11 @@ public class Student {
     public String studentName;
     public String address;
 
+    public Student(int id, String name) {
+        studentID = id;
+        studentName = name;
+    }
+
     public void showStudentInfo() {
         System.out.println(studentName + "," + address);
     }
@@ -13,9 +18,6 @@ public class Student {
         return studentName;
     }
 
-//    public void setStudentName(String studentName) {
-//        this.studentName = studentName;
-//    }
 
 
 }
