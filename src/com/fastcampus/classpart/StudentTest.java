@@ -14,5 +14,8 @@ public class StudentTest {
 
         studentKim.showStudentInfo();
 
+        System.out.println(studentLee);
+        System.out.println(studentKim); // 주소값(jvm이 준 해시코드 값)
+
     }
 }
