@@ -3,6 +3,7 @@ package com.fastcampus.classpart;
 public class StudentTest {
     public static void main(String[] args) {
         Student studentLee = new Student(1, "테스트");
+        studentLee.setSubject("국어", 100);
 
         studentLee.showStudentInfo();
 
