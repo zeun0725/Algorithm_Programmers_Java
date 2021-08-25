@@ -3,12 +3,14 @@ package com.fastcampus.classpart;
 public class PersonTest {
 
     public static void main(String[] args) {
-        Person person = new Person();
-        person.age = 40;
-        person.name = "James";
-        person.isMarried = true;
-        person.numberOfChildren = 3;
+        Person personNoName = new Person();
+        personNoName.showInfo();
 
-        System.out.println("나이:" + person.age);
+        Person personLee = new Person("Lee", 20);
+        personLee.showInfo();
+        System.out.println(personLee);
+
+        Person p = personLee.getSelf();
+        System.out.println(p);
     }
 }
