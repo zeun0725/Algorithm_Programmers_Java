@@ -9,13 +9,9 @@ public class People {
         this.money = money;
     }
 
-    public void buyStarCafe(StarCafe starCafe, int price) {
+    public void orderMenu(Cafe cafe, int price) {
         money -= price;
-        starCafe.sellCoffee(price);
+        cafe.sellCoffee(price);
     }
 
-    public void buyBeanCafe(BeanCafe beanCafe, int price) {
-        money -= price;
-        beanCafe.sellCoffee(price);
-    }
 }
