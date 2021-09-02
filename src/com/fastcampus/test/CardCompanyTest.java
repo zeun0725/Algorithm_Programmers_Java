@@ -9,6 +9,5 @@ public class CardCompanyTest {
 
         System.out.println(myCard.getCardNumber());
         System.out.println(yourCard.getCardNumber());
-
     }
 }
