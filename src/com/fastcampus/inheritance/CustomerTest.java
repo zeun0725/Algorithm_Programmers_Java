@@ -8,7 +8,7 @@ public class CustomerTest {
 //        customerLee.bonusPoint = 1000;
 //        System.out.println(customerLee.showCustomerInfo());
 
-        VIPCustomer customerKim = new VIPCustomer();
+        VIPCustomer customerKim = new VIPCustomer(10020, "김유신");
         customerKim.setCustomerName("김유신");
         customerKim.setCustomerID(10020);
         customerKim.bonusPoint = 10000;
