@@ -12,7 +12,13 @@ public class VIPCustomer extends Customer{
         salesRatio = 0.1;
     }
 
-//    public VIPCustomer() {
+    @Override
+    public int calcPrice(int price) {
+        bonusPoint += price * bonusRatio;
+        return price - (int)(price * salesRatio);
+    }
+
+    //    public VIPCustomer() {
 //        super(0, null);
 //        customerGrade = "VIP";
 //        bonusRatio = 0.05;

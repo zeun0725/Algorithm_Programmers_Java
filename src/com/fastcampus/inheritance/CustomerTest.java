@@ -14,7 +14,5 @@ public class CustomerTest {
         customerKim.bonusPoint = 10000;
         System.out.println(customerKim.showCustomerInfo());
 
-        customerLee = customerKim; //업캐스팅
-
     }
 }

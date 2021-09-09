@@ -22,7 +22,7 @@ public class Customer {
         System.out.println("Customer(int, String) 생성자 호출");
     }
 
-    public int calPrice(int price) {
+    public int calcPrice(int price) {
         bonusPoint += price * bonusRatio;
         return price;
     }
