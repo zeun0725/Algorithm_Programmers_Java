@@ -3,13 +3,14 @@ package com.fastcampus.polymorphism;
 public class VIPCustomer extends Customer {
 
     double salesRatio;
-    private int agentID;
+    private final int agentID;
 
-    public VIPCustomer(int customerID, String customerName) {
+    public VIPCustomer(int customerID, String customerName, int agentID) {
         super(customerID, customerName);
         customerGrade = "VIP";
         bonusRatio = 0.05;
-        salesRatio = 0.1;
+        salesRatio = 0.2;
+        this.agentID = agentID;
     }
 
     @Override
@@ -18,11 +19,8 @@ public class VIPCustomer extends Customer {
         return price - (int)(price * salesRatio);
     }
 
-    //    public VIPCustomer() {
-//        super(0, null);
-//        customerGrade = "VIP";
-//        bonusRatio = 0.05;
-//        salesRatio = 0.1;
-//        System.out.println("VIPCustomer() 생성자 호출");
-//    }
+    @Override
+    public String showCustomerInfo() {
+        return super.showCustomerInfo() + "담당 직원 번호는 " + agentID + "입니다.";
+    }
 }
