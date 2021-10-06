@@ -12,5 +12,8 @@ public class CalcTest {
         System.out.println(calc.divide(n1, n2));
         calc.showInfo();
 
+        calc.description();
+
+        Calc.total(new int[]{1,2,3,4,5});
     }
 }
